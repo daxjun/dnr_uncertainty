@@ -1,0 +1,42 @@
+Network: IEEE 33-bus (Baran & Wu 1989); periods [12, 19]; load +-15% (Gamma_L=6), PV -30% (Gamma_PV=2)
+  C&CG iter  1: LB=   126.724  UB=   127.147  gap=3.33e-03  worst costs=[94.13, 140.17]
+  C&CG iter  2: LB=   127.095  UB=   127.147  gap=4.09e-04  worst costs=[94.13, 140.17]
+Method: C&CG with heuristic separation (screening + 1-swap local search) | converged=True | exact=False | 54.8 s
+
+Opened switches (initially closed): [7]
+Closed switches (initially open)  : [35]
+Open branches in final topology    : [7, 33, 34, 36, 37]
+Robust objective (switching + weighted worst-case cost): 127.15 $ (master lower bound 127.09453243545981)
+scenario                cost $   loss kW   curt kW   shed kW    Vmin    Vmax
+h12_forecast             66.21     45.98      0.00      0.00  0.9990  1.0300
+h19_forecast            121.87     84.63      0.00      0.00  0.9715  1.0300
+h12_forecast_wc          94.13     65.37      0.00      0.00  0.9849  1.0300
+h19_forecast_wc         140.17     97.34      0.00      0.00  0.9687  1.0300
+
+=== VALIDATION REPORT ===
+[PASS] solver status optimal / acceptable: termination=optimal, gap=1.2293827762118897e-16
+[PASS] topology connected (all buses reachable from substation): 33/33 buses reachable
+[PASS] no cycles in energised network: independent loops=0
+[PASS] closed branches = N-1: 32 closed vs 32
+[PASS] radial tree structure: radial and connected
+[PASS] power-balance residuals within tolerance: max residual 4.55e-13 kW
+[PASS] voltage limits respected (MILP): max violation low=0.00e+00, high=0.00e+00 p.u.
+[PASS] line limits respected (MILP current at actual voltage): max overload 0.000 % of limit
+[PASS] no flow on open branches (same switch plan in every scenario): max |flow| on open branches 0.00e+00 kW/kVAr; switch plan is one first-stage vector
+[PASS] PV curtailment / load shedding nonnegative and within bounds: min -0.00e+00, max excess 0.00e+00 kW
+[PASS] AC power-flow converged: backward/forward sweep
+[PASS] AC vs LinDistFlow voltage error small (< 0.01 p.u.): max |dV| = 0.0016 p.u.
+[PASS] AC voltage limits respected: max AC violation 0.0000 p.u.
+[PASS] AC branch currents within limit: max AC overload 0.00 %
+[INFO] max loss error |AC - linearised| reported: 11.32 kW (linearised loss is a lower approximation)
+[INFO] load shedding only if necessary (zero in all scenarios?): total shed over scenarios = 0.000 kW
+[PASS] no load shedding at any tested realisation inside U: max shed over 16 random vertices = 0.000 kW
+[PASS] random vertices of U do not exceed the worst-case cost found (+1 %): max relative excess of sampled period cost over worst found = 0.00% (worst found per period: [94.13, 140.17])
+OVERALL: ALL CRITICAL CHECKS PASSED
+figure: /home/claude/dnr_uncertainty/results/figures/robust_voltage_profile.png
+figure: /home/claude/dnr_uncertainty/results/figures/robust_line_loading.png
+figure: /home/claude/dnr_uncertainty/results/figures/robust_pv_curtailment.png
+figure: /home/claude/dnr_uncertainty/results/figures/robust_load_shedding.png
+figure: /home/claude/dnr_uncertainty/results/figures/robust_topology.png
+figure: /home/claude/dnr_uncertainty/results/figures/robust_ccg_convergence.png
+Results written to /home/claude/dnr_uncertainty/results

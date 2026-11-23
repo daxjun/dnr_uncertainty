@@ -1,0 +1,114 @@
+{
+  "all_passed": true,
+  "n_checks": 16,
+  "checks": [
+    {
+      "name": "solver status optimal / acceptable",
+      "passed": true,
+      "detail": "termination=optimal, gap=1.2293827762118897e-16",
+      "severity": "error"
+    },
+    {
+      "name": "topology connected (all buses reachable from substation)",
+      "passed": true,
+      "detail": "33/33 buses reachable",
+      "severity": "error"
+    },
+    {
+      "name": "no cycles in energised network",
+      "passed": true,
+      "detail": "independent loops=0",
+      "severity": "error"
+    },
+    {
+      "name": "closed branches = N-1",
+      "passed": true,
+      "detail": "32 closed vs 32",
+      "severity": "error"
+    },
+    {
+      "name": "radial tree structure",
+      "passed": true,
+      "detail": "radial and connected",
+      "severity": "error"
+    },
+    {
+      "name": "power-balance residuals within tolerance",
+      "passed": true,
+      "detail": "max residual 4.55e-13 kW",
+      "severity": "error"
+    },
+    {
+      "name": "voltage limits respected (MILP)",
+      "passed": true,
+      "detail": "max violation low=0.00e+00, high=0.00e+00 p.u.",
+      "severity": "error"
+    },
+    {
+      "name": "line limits respected (MILP current at actual voltage)",
+      "passed": true,
+      "detail": "max overload 0.000 % of limit",
+      "severity": "error"
+    },
+    {
+      "name": "no flow on open branches (same switch plan in every scenario)",
+      "passed": true,
+      "detail": "max |flow| on open branches 0.00e+00 kW/kVAr; switch plan is one first-stage vector",
+      "severity": "error"
+    },
+    {
+      "name": "PV curtailment / load shedding nonnegative and within bounds",
+      "passed": true,
+      "detail": "min -0.00e+00, max excess 0.00e+00 kW",
+      "severity": "error"
+    },
+    {
+      "name": "AC power-flow converged",
+      "passed": true,
+      "detail": "backward/forward sweep",
+      "severity": "error"
+    },
+    {
+      "name": "AC vs LinDistFlow voltage error small (< 0.01 p.u.)",
+      "passed": true,
+      "detail": "max |dV| = 0.0016 p.u.",
+      "severity": "warning"
+    },
+    {
+      "name": "AC voltage limits respected",
+      "passed": true,
+      "detail": "max AC violation 0.0000 p.u.",
+      "severity": "warning"
+    },
+    {
+      "name": "AC branch currents within limit",
+      "passed": true,
+      "detail": "max AC overload 0.00 %",
+      "severity": "warning"
+    },
+    {
+      "name": "max loss error |AC - linearised| reported",
+      "passed": true,
+      "detail": "11.32 kW (linearised loss is a lower approximation)",
+      "severity": "info"
+    },
+    {
+      "name": "load shedding only if necessary (zero in all scenarios?)",
+      "passed": true,
+      "detail": "total shed over scenarios = 0.000 kW",
+      "severity": "info"
+    },
+    {
+      "name": "no load shedding at any tested realisation inside U",
+      "passed": true,
+      "detail": "max shed over 16 random vertices = 0.000 kW",
+      "severity": "warning"
+    },
+    {
+      "name": "random vertices of U do not exceed the worst-case cost found (+1 %)",
+      "passed": true,
+      "detail": "max relative excess of sampled period cost over worst found = 0.00% (worst found per period: [94.13, 140.17])",
+      "severity": "warning"
+    }
+  ]
+}
